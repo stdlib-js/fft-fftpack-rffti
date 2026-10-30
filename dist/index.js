@@ -1,0 +1,13 @@
+"use strict";var i=function(t,r){return function(){try{return r||t((r={exports:{}}).exports,r),r.exports}catch(e){throw (r=0, e)}};};var a=i(function(ar,p){
+var T=require('@stdlib/ndarray-base-dtypes2strings/dist'),b=require('@stdlib/ndarray-dtypes/dist'),E={odtypes:T(b("real_floating_point_and_generic"))};p.exports=E
+});var f=i(function(sr,d){
+function P(){return{dtype:"float64"}}d.exports=P
+});var u=i(function(nr,y){
+var x=require('@stdlib/ndarray-dtypes/dist'),D=require('@stdlib/ndarray-base-nullary-strided1d-dispatch-factory/dist'),S=require('@stdlib/fft-base-fftpack-ndarray-float64-rffti/dist'),_=require('@stdlib/fft-base-fftpack-ndarray-float32-rffti/dist'),O=require('@stdlib/fft-base-fftpack-ndarray-generic-rffti/dist'),j=a().odtypes,V=x("integer_and_generic"),F={types:["float64","float32"],fcns:[S,_],default:O},Y=D(F,[V],j);y.exports=Y
+});var g=i(function(ur,l){
+var I=require('@stdlib/assert-has-own-property/dist'),z=require('@stdlib/assert-is-plain-object/dist'),L=require('@stdlib/assert-is-positive-integer/dist').isPrimitive,R=require('@stdlib/ndarray-base-assert-is-data-type/dist'),A=require('@stdlib/ndarray-base-dtype-resolve-str/dist'),B=require('@stdlib/array-base-assert-contains/dist'),C=require('@stdlib/ndarray-from-scalar/dist'),G=require('@stdlib/ndarray-zeros/dist'),H=require('@stdlib/array-base-join/dist'),o=require('@stdlib/error-tools-fmtprodmsg/dist'),q=a().odtypes,J=f(),K=u();function M(t){var r,e,s,n;if(!L(t))throw new TypeError(o('null4b',t));if(r=J(),arguments.length>1){if(e=arguments[1],!z(e))throw new TypeError(o('null2V',e));if(I(e,"dtype")){if(s=A(e.dtype),!R(e.dtype)||!B(q,s))throw new TypeError(o('null4S',"dtype",H(q,'", "'),e.dtype));r.dtype=s}}return n=G([2*t+34],{dtype:r.dtype}),K(n,C(t,{dtype:"int32"})),n}l.exports=M
+});var w=i(function(or,c){
+var N=require('@stdlib/assert-is-positive-integer/dist').isPrimitive,Q=require('@stdlib/assert-is-vector-like/dist'),U=require('@stdlib/ndarray-base-dtype-resolve-str/dist'),W=require('@stdlib/ndarray-dtype/dist'),X=require('@stdlib/array-base-assert-contains/dist'),Z=require('@stdlib/ndarray-from-scalar/dist'),$=require('@stdlib/array-base-join/dist'),v=require('@stdlib/error-tools-fmtprodmsg/dist'),m=a().odtypes,k=u();function rr(t,r){var e;if(!Q(t))throw new TypeError(v('null4c',t));if(e=U(W(t)),!X(m,e))throw new TypeError(v('nullHZ',$(m,'", "'),e));if(!N(r))throw new TypeError(v('null45',r));return k(t,Z(r,{dtype:"int32"})),t}c.exports=rr
+});var er=require('@stdlib/utils-define-nonenumerable-read-only-property/dist'),h=g(),tr=w();er(h,"assign",tr);module.exports=h;
+/** @license Apache-2.0 */
+//# sourceMappingURL=index.js.map
